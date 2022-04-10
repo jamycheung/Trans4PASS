@@ -3,7 +3,9 @@
 
 ![trans4pass](fig_trans4pass.png)
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bending-reality-distortion-aware-transformers/semantic-segmentation-on-densepass)](https://paperswithcode.com/sota/semantic-segmentation-on-densepass?p=bending-reality-distortion-aware-transformers)
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bending-reality-distortion-aware-transformers/semantic-segmentation-on-cityscapes-val)](https://paperswithcode.com/sota/semantic-segmentation-on-cityscapes-val?p=bending-reality-distortion-aware-transformers)
 
 ### Introduction
 
