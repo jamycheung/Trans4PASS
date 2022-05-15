@@ -1,0 +1,14 @@
+scipy==1.4
+tensorboardX==2.0
+scikit-image==0.16.2
+Pillow==7.1
+opencv-python
+timm==0.3.2
+packaging
+pyyaml 
+requests
+tqdm
+ipython
+opencv-python
+thop
+tabulate
