@@ -80,10 +80,15 @@ Download the models from [GoogleDrive](https://drive.google.com/drive/folders/1s
 │   │   └── trans4pass_tiny_512x512
 │   │       └── trans4pass_tiny_512x512.pth
 │   └── stanford2d3d
+│   │   ├── trans4pass_small_1080x1080
+│   │   │   └── trans4pass_small_1080x1080.pth
+│   │   └── trans4pass_tiny_1080x1080
+│   │       └── trans4pass_tiny_1080x1080.pth
+│   └── stanford2d3d_pan
 │       ├── trans4pass_small_1080x1080
-│       │   └── trans4pass_small_1080x1080.pth
+│       │   └── trans4pass_small_pan_F1.pth
 │       └── trans4pass_tiny_1080x1080
-│           └── trans4pass_tiny_1080x1080.pth
+│           └── trans4pass_tiny_pan_F1.pth
 ```
 
 ```
