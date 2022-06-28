@@ -28,7 +28,7 @@ python setup.py develop --user
 
 ## Data Preparation
 
-Prepare datasets: [Cityscapes](https://www.cityscapes-dataset.com/), [Stanford2D3D](http://buildingparser.stanford.edu/dataset.html), [DensePASS](https://github.com/chma1024/DensePASS).
+Prepare datasets: [Cityscapes](https://www.cityscapes-dataset.com/), [Stanford2D3D](https://arxiv.org/abs/1702.01105), [DensePASS](https://github.com/chma1024/DensePASS).
 ```
 datasets/
 ├── cityscapes
