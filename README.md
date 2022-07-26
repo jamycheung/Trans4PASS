@@ -3,7 +3,7 @@
 
 ![trans4pass](fig_trans4pass.png)
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bending-reality-distortion-aware-transformers/semantic-segmentation-on-densepass)](https://paperswithcode.com/sota/semantic-segmentation-on-densepass?p=bending-reality-distortion-aware-transformers)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/behind-every-domain-there-is-a-shift-adapting/semantic-segmentation-on-densepass)](https://paperswithcode.com/sota/semantic-segmentation-on-densepass?p=behind-every-domain-there-is-a-shift-adapting)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bending-reality-distortion-aware-transformers/semantic-segmentation-on-cityscapes-val)](https://paperswithcode.com/sota/semantic-segmentation-on-cityscapes-val?p=bending-reality-distortion-aware-transformers)
 
