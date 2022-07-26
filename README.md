@@ -5,6 +5,8 @@
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/behind-every-domain-there-is-a-shift-adapting/semantic-segmentation-on-densepass)](https://paperswithcode.com/sota/semantic-segmentation-on-densepass?p=behind-every-domain-there-is-a-shift-adapting)
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/behind-every-domain-there-is-a-shift-adapting/semantic-segmentation-on-synpass)](https://paperswithcode.com/sota/semantic-segmentation-on-synpass?p=behind-every-domain-there-is-a-shift-adapting)
+
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/behind-every-domain-there-is-a-shift-adapting/semantic-segmentation-on-stanford2d3d-1)](https://paperswithcode.com/sota/semantic-segmentation-on-stanford2d3d-1?p=behind-every-domain-there-is-a-shift-adapting)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bending-reality-distortion-aware-transformers/semantic-segmentation-on-cityscapes-val)](https://paperswithcode.com/sota/semantic-segmentation-on-cityscapes-val?p=bending-reality-distortion-aware-transformers)
