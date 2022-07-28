@@ -154,13 +154,25 @@ This repository is under the Apache-2.0 license. For commercial use, please cont
 
 ## Citations
 
-If you are interested in this work, please cite the following work:
+If you are interested in this work, please cite the following works:
 
-```text
-@article{zhang2022bending,
-  title={Bending Reality: Distortion-aware Transformers for Adapting to Panoramic Semantic Segmentation},
+Trans4PASS+ [[**PDF**](https://arxiv.org/pdf/2207.11860.pdf)]
+```
+@article{zhang2022behind,
+  title={Behind Every Domain There is a Shift: Adapting Distortion-aware Vision Transformers for Panoramic Semantic Segmentation},
+  author={Zhang, Jiaming and Yang, Kailun and Shi, Hao and Rei{\ss}, Simon and Peng, Kunyu and Ma, Chaoxiang and Fu, Haodong and Wang, Kaiwei and Stiefelhagen, Rainer},
+  journal={arXiv preprint arXiv:2207.11860},
+  year={2022}
+}
+```
+
+Trans4PASS [[**PDF**](https://arxiv.org/pdf/2203.01452.pdf)]
+```
+@inproceedings{zhang2022bending,
+  title={Bending reality: Distortion-aware transformers for adapting to panoramic semantic segmentation},
   author={Zhang, Jiaming and Yang, Kailun and Ma, Chaoxiang and Rei{\ss}, Simon and Peng, Kunyu and Stiefelhagen, Rainer},
-  journal={arXiv preprint arXiv:2203.01452},
+  booktitle={2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages={16917--16927},
   year={2022}
 }
 ```
