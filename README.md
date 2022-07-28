@@ -157,7 +157,7 @@ This repository is under the Apache-2.0 license. For commercial use, please cont
 If you are interested in this work, please cite the following works:
 
 Trans4PASS+ [[**PDF**](https://arxiv.org/pdf/2207.11860.pdf)]
-```text
+```
 @article{zhang2022behind,
   title={Behind Every Domain There is a Shift: Adapting Distortion-aware Vision Transformers for Panoramic Semantic Segmentation},
   author={Zhang, Jiaming and Yang, Kailun and Shi, Hao and Rei{\ss}, Simon and Peng, Kunyu and Ma, Chaoxiang and Fu, Haodong and Wang, Kaiwei and Stiefelhagen, Rainer},
@@ -167,7 +167,7 @@ Trans4PASS+ [[**PDF**](https://arxiv.org/pdf/2207.11860.pdf)]
 ```
 
 Trans4PASS [[**PDF**](https://arxiv.org/pdf/2203.01452.pdf)]
-```text
+```
 @inproceedings{zhang2022bending,
   title={Bending Reality: Distortion-aware Transformers for Adapting to Panoramic Semantic Segmentation},
   author={Zhang, Jiaming and Yang, Kailun and Ma, Chaoxiang and Rei{\ss}, Simon and Peng, Kunyu and Stiefelhagen, Rainer},
