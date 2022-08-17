@@ -178,7 +178,7 @@ class Trainer(object):
                 save_checkpoint(self.args, self.model, epoch, self.optimizer, self.lr_scheduler, is_best=False)
 
             if not self.args.skip_val and iteration % val_per_iters == 0:
-                self.validation(epoch)
+                # self.validation(epoch)
                 self.test()
                 self.model.train()
 

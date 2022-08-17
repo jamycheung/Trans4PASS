@@ -1,4 +1,4 @@
-"""Prepare DensePASS dataset"""
+"""Prepare DensePASS13 dataset"""
 import os
 import torch
 import numpy as np
@@ -10,42 +10,34 @@ from segmentron.data.dataloader.seg_data_base import SegmentationDataset
 import random
 from torch.utils import data
 
-
-class DensePASSSegmentation(SegmentationDataset):
+class DensePASS13Segmentation(SegmentationDataset):
     """DensePASS Semantic Segmentation Dataset."""
-    NUM_CLASS = 19
+    NUM_CLASS = 13
 
-    def __init__(self, root='datasets/DensePASS', split='val', mode=None, transform=None, **kwargs):
-        super(DensePASSSegmentation, self).__init__(root, split, mode, transform, **kwargs)
+    def __init__(self, root='datasets/DensePASS', split='val', mode=None, transform=None, fov=360, **kwargs):
+        super(DensePASS13Segmentation, self).__init__(root, split, mode, transform, **kwargs)
         assert os.path.exists(self.root), "Please put dataset in {SEG_ROOT}/datasets/DensePASS"
         self.images, self.mask_paths = _get_city_pairs(self.root, self.split)
         self.crop_size = [400, 2048]  # for inference only
         assert (len(self.images) == len(self.mask_paths))
+        self.fov = fov
         if len(self.images) == 0:
             raise RuntimeError("Found 0 images in subfolders of:" + root + "\n")
-        self.valid_classes = [7, 8, 11, 12, 13, 17, 19, 20, 21, 22,
-                              23, 24, 25, 26, 27, 28, 31, 32, 33]
-        self._key = np.array([-1, -1, -1, -1, -1, -1,
-                              -1, -1, 0, 1, -1, -1,
-                              2, 3, 4, -1, -1, -1,
-                              5, -1, 6, 7, 8, 9,
-                              10, 11, 12, 13, 14, 15,
-                              -1, -1, 16, 17, 18])
-        self._mapping = np.array(range(-1, len(self._key) - 1)).astype('int32')
-
-    def _class_to_index(self, mask):
+        self._key = np.array([0,1,2,3,4,5,6,7,8,9,10,11,11,12,12,12,-1,12,12])
+        
+    def _map19to13(self, mask):
         values = np.unique(mask)
+        new_mask = np.zeros_like(mask)
+        new_mask -= 1
         for value in values:
-            assert (value in self._mapping)
-        index = np.digitize(mask.ravel(), self._mapping, right=True)
-        return self._key[index].reshape(mask.shape)
+            if value == 255: 
+                new_mask[mask==value] = -1
+            else:
+                new_mask[mask==value] = self._key[value]
+        mask = new_mask
+        return mask
     def _val_sync_transform_resize(self, img, mask):
         w, h = img.size
-        x1 = random.randint(0, w - self.crop_size[1])
-        y1 = random.randint(0, h - self.crop_size[0])
-        img = img.crop((x1, y1, x1 + self.crop_size[1], y1 + self.crop_size[0]))
-        mask = mask.crop((x1, y1, x1 + self.crop_size[1], y1 + self.crop_size[0]))
-
         # final transform
         img, mask = self._img_transform(img), self._mask_transform(mask)
         return img, mask
@@ -70,7 +62,8 @@ class DensePASSSegmentation(SegmentationDataset):
         return img, mask, os.path.basename(self.images[index])
 
     def _mask_transform(self, mask):
-        return torch.LongTensor(np.array(mask).astype('int32'))
+        target = self._map19to13(np.array(mask).astype('int32'))
+        return torch.LongTensor(np.array(target).astype('int32'))
 
     def __len__(self):
         return len(self.images)
@@ -83,8 +76,7 @@ class DensePASSSegmentation(SegmentationDataset):
     def classes(self):
         """Category names."""
         return ('road', 'sidewalk', 'building', 'wall', 'fence', 'pole', 'traffic light',
-                'traffic sign', 'vegetation', 'terrain', 'sky', 'person', 'rider', 'car',
-                'truck', 'bus', 'train', 'motorcycle', 'bicycle')
+                'traffic sign', 'vegetation', 'terrain', 'sky', 'person', 'car')
 
 
 def _get_city_pairs(folder, split='train'):
@@ -98,7 +90,6 @@ def _get_city_pairs(folder, split='train'):
                 if filename.endswith('.png'):
                     imgpath = os.path.join(root, filename)
                     foldername = os.path.basename(os.path.dirname(imgpath))
-                    # maskname = filename.replace('_.png', '_labelTrainIds.png')
                     maskname = filename.replace('.png', '_labelTrainIds.png')
                     maskpath = os.path.join(mask_folder, foldername, maskname)
                     if os.path.isfile(imgpath) and os.path.isfile(maskpath):

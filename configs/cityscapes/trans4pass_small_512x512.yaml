@@ -7,7 +7,7 @@ TRAIN:
     EPOCHS: 200
     BATCH_SIZE: 4
     CROP_SIZE: (512,512)
-    BASE_SIZE: 512
+    BASE_SIZE: 1024
     BACKBONE_PRETRAINED_PATH: "pretrained/mit_b2.pth"
     MODEL_SAVE_DIR: 'workdirs/cityscapes/trans4pass_small_512x512/'
     APEX: False

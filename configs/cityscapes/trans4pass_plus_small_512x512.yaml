@@ -8,21 +8,22 @@ TRAIN:
     BATCH_SIZE: 4
     CROP_SIZE: (512,512)
     BASE_SIZE: 1024
-    BACKBONE_PRETRAINED_PATH: "pretrained/mit_b1.pth"
-    MODEL_SAVE_DIR: 'workdirs/cityscapes/trans4pass_tiny_512x512/'
+    BACKBONE_PRETRAINED_PATH: "pretrained/mit_b2.pth"
+    MODEL_SAVE_DIR: 'workdirs/cityscapes/trans4pass_plus_small_512x512/'
     APEX: False
 TEST:
     BATCH_SIZE: 1
-    TEST_MODEL_PATH: "workdirs/cityscapes/trans4pass_tiny_512x512/trans4pass_tiny_512x512.pth"
+    TEST_MODEL_PATH: "workdirs/cityscapes/trans4pass_plus_small_512x512/trans4pass_plus_small_512x512.pth"
     CROP_SIZE: (512, 512)
 
 SOLVER:
     OPTIMIZER: "adamw"
     LR: 0.00005
+    OHEM: True
 
 MODEL:
     MODEL_NAME: "Trans4PASS"
-    BACKBONE: "trans4pass_v1"
+    BACKBONE: "trans4pass_v2"
     EMB_CHANNELS: 128
     USE_DCN: [True, False, False, False]
     USE_DEDE: [True, True, True, True]

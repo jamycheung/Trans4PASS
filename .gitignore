@@ -2,3 +2,7 @@
 *.pyc
 *.pth
 .idea/*
+.vscode/*
+datasets
+pretrained
+workdirs

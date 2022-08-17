@@ -2,7 +2,10 @@ import torch.nn.functional as F
 from segmentron.models.model_zoo import MODEL_REGISTRY
 from segmentron.models.segbase import SegBaseModel
 from segmentron.config import cfg
-from segmentron.modules.dmlp import DMLP
+# --- dmlpv1 
+# from segmentron.modules.dmlp import DMLP
+# --- dmlpv2 
+from segmentron.modules.dmlpv2 import DMLP
 
 __all__ = ['Trans4PASS']
 
