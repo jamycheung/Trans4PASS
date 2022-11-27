@@ -4,8 +4,8 @@ DATASET:
     STD: [0.229, 0.224, 0.225]
     WORKERS: 0
 TRAIN:
-    EPOCHS: 40
-    BATCH_SIZE: 1
+    EPOCHS: 100
+    BATCH_SIZE: 4
     CROP_SIZE: (1080,1080)
     BASE_SIZE: 1080
     BACKBONE_PRETRAINED_PATH: "pretrained/mit_b2.pth"
@@ -16,11 +16,11 @@ TEST:
     TEST_MODEL_PATH: "workdirs/stanford2d3d_pan/trans4pass_plus_small_1080x1080/trans4pass_plus_small_pan_F1.pth"
     # TEST_MODEL_PATH: "workdirs/stanford2d3d_pan/trans4pass_plus_small_1080x1080/trans4pass_plus_small_pan_F2.pth"
     # TEST_MODEL_PATH: "workdirs/stanford2d3d_pan/trans4pass_plus_small_1080x1080/trans4pass_plus_small_pan_F3.pth"
-    CROP_SIZE: (1080,1080)
+    CROP_SIZE: (2048,1024)
 
 SOLVER:
     OPTIMIZER: "adamw"
-    LR: 0.00025
+    LR: 0.0001
     OHEM: False
     LOSS_NAME: 'ce'
 
