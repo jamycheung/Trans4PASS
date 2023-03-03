@@ -231,6 +231,7 @@ python tools/eval_s2d3d.py --config-file configs/stanford2d3d_pan/trans4pass_plu
 | Trans4PASS+ (S) |   3 | 60.25 | [model](https://drive.google.com/drive/folders/14YXmPBXc8m-XR7W_LyKwiDotrjyjSKfH?usp=sharing) |
 | Trans4PASS+ (S) | avg | 54.00 |  |
 
+*Note: for the Trans4PASS versions (not Trans4PASS+), please modify the respective DMLP version, check [here](https://github.com/jamycheung/Trans4PASS/blob/main/segmentron/models/trans4pass.py#L5-L8).*
 
 ### Trans4PASS models on SP:
 supervised trained on SynPASS

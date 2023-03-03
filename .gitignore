@@ -6,3 +6,5 @@
 datasets
 pretrained
 workdirs
+build/*
+segmentron*
